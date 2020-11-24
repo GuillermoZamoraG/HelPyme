@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+#import cx_Oracle
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,12 +78,16 @@ WSGI_APPLICATION = 'HelPyme.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.01:1521/orcl',
-        'USER': 'hr',
-        'PASSWORD': 'hr',
-    }
+        'NAME': '127.0.0.1:1521/xepdb1',
+        'USER': 'logistica',
+        'PASSWORD': 'logistica123',
+        'TEST': {
+            'USER': 'default_test',
+            'TBLSPACE': 'default_test_tbls',
+            'TBLSPACE_TMP': 'default_test_tbls_tmp',
+        },
+    },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
