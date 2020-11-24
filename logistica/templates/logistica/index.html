@@ -1,0 +1,166 @@
+{% extends "logistica/base.html" %}
+
+{% load static%}
+{%block title %} Principal {% endblock%}
+
+{% block content%}
+    <section class="slider">
+                <ul class="slides">
+                  <li>
+                    <img src="{% static 'img/po1.jpg' %}" alt="img1">
+                    <div class="caption center-align">
+                      <h1 class="grey">Carpinteria</h1>
+                      <h5 class="grey">Encuentra aquí tus articulos de carpinteria</h5>
+                      <a href="" class="btn btn-large white black-text waves-effect waves-grey">Ver</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <img src="{% static 'img/po2.jpg' %}" alt="img2">
+                    <div class="caption right-align">
+                      <h3 class="grey">Telas</h3>
+                      <h5 class="grey">Telas con 50% de descuento</h5>
+                      <a href="" class="btn btn-large white black-text waves-effect waves-grey">Ver</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <img src="{% static 'img/po3.jpg' %}" alt="img3">
+                    <div class="caption left-align">
+                      <h3 class="grey" >Vende</h3>
+                      <h5 class="grey">Ingresa y comienza a vender tus insumos</h5>
+                      <a href="" class="btn btn-large white black-text waves-effect waves-grey">Ver</a>
+                    </div>
+                  </li>
+
+                </ul>
+              </section>
+
+        <main>
+            <br><br><br>
+            <div class='row'>
+                <div class="col s12 m4">
+                    <div>
+
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <form action="buscar_para_Seguir" method="POST">
+                        {% csrf_token %}
+                        <label><h5>Ingrese número de seguimiento: </h5> </label>
+                        <input type="number" name="codigo">
+                        <input type="submit" name="opcion" value="Buscar">
+                    </form>
+            </div>
+
+            <br><br><br><br><br><br><br>
+
+                <!-- Sección de información  -->
+                    <div class="row">
+                      <ul class="collapsible">
+                        <li>
+                          <div class="collapsible-header center">¿Quienes Somos?</div>
+                          <div class="collapsible-body"><span class="center">Nosotros como HelPyme tenemos la misión de asegurarnos de que nuestros usuarios tengan la mejor experiencia de uso posible,
+                              tal como se merece cada uno de nuestros clientes en forma de recompensa por elegir nuestros servicios.
+                              Esta misma misión se replica para cada uno de los servicios que se entregan en esta empresa.</span></div>
+                        </li>
+
+                      </ul>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer grey darken-4">
+
+      <div class="container">
+
+          <div class="row">
+              <div class="col s12 m2">
+
+              </div>
+
+              <div class="col s12 m4">
+                  <h5 class="white-text">Nuestras Redes Sociales</h5>
+                  <ul>
+                      <li>
+                          <a class="grey-text text-lighten-3" href="">
+                              <img src="{% static 'img/twitter.svg' %}" width="18" class="icono-footer" alt="twitter">
+                              Síguenos en Twitter
+                          </a>
+                      </li>
+                      <li>
+                          <a class="grey-text text-lighten-3" href="">
+                              <img src="{% static 'img/telegram.svg' %}" width="18" class="icono-footer" alt="telegram">
+                              Síguenos en Telegram
+                          </a>
+                      </li>
+                      <li>
+                          <a class="grey-text text-lighten-3" href="">
+                              <img src="{% static 'img/facebook.svg' %}" width="18" class="icono-footer" alt="facebook">
+                              Síguenos en Facebook
+                          </a>
+                      </li>
+                      <li>
+                          <a class="grey-text text-lighten-3" href="">
+                              <img src="{% static 'img/instagram.svg' %}" width="18" class="icono-footer" alt="instagram">
+                              Síguenos en Instagram
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+
+              <div class="col s12 m4">
+                  <h5 class="white-text">Información y Contacto</h5>
+                  <ul>
+                      <li>
+                          <a class="grey-text text-lighten-3">
+                              <span class="material-icons md-15">location_on</span>
+                              Bodulagüe #14639, San Bernardo
+                          </a>
+                      </li>
+
+                      <li>
+                          <a class="grey-text text-lighten-3">
+                              <span class="material-icons md-15">local_phone</span>
+                              Desde Chile: (+56) 9 12398745
+                          </a>
+                      </li>
+
+                      <li>
+                          <a class="grey-text text-lighten-3">
+                              <span class="material-icons md-15">alternate_email</span>
+                              contacto@helpyme.cl
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
+      </div>
+
+      <div class="row" id="footer-copyright__pequeño">
+          <div class="footer-copyright">
+              <div class="col s6 center">
+                  <span class="material-icons md-14">copyright</span>
+                  2020 - 2022 HelPyme inc. Todos los derechos reservados.
+              </div>
+
+              <div class="center col s6">
+                  <i class="grey-text text-lighten-4 right">
+                      <a href="../nosotros">Información Compañía</a> |
+                      <a href="#">Políticas de Privacidad</a> |
+                      <a href="#">Términos y Condiciones</a>
+                  </i>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <!-- Fin pie de página -->
+
+{% endblock %}
+
+{% block javascript%}
+
+
+{% endblock %}
